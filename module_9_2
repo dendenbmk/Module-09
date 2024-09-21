@@ -1,0 +1,11 @@
+first_strings = ['Elon', 'Musk', 'Programmer', 'Monitors', 'Variable']
+second_strings = ['Task', 'Git', 'Comprehension', 'Java', 'Computer', 'Assembler']
+
+first_result = [len(str_) for str_ in first_strings if len(str_) >= 5]
+second_result = [(str_from_fir, str_from_sec)  for str_from_fir in first_strings
+                 for str_from_sec in second_strings  if len(str_from_fir) == len(str_from_sec)]
+third_result = {str_: len(str_) for str_ in first_strings + second_strings if len(str_) % 2 == 0}
+
+print(first_result)
+print(second_result)
+print(third_result)
